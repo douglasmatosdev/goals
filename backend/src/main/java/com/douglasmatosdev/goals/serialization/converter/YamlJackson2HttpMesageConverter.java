@@ -1,4 +1,4 @@
-package com.douglasmatosdev.serialization.converter;
+package com.douglasmatosdev.goals.serialization.converter;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter;

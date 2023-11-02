@@ -1,4 +1,4 @@
-package com.douglasmatosdev.config;
+package com.douglasmatosdev.goals.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

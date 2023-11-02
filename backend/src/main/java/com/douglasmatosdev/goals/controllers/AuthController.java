@@ -1,4 +1,4 @@
-package com.douglasmatosdev.controllers;
+package com.douglasmatosdev.goals.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.douglasmatosdev.data.vo.v1.security.AccountCredentialsVO;
-import com.douglasmatosdev.services.AuthServices;
+import com.douglasmatosdev.goals.data.vo.v1.security.AccountCredentialsVO;
+import com.douglasmatosdev.goals.services.AuthServices;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 

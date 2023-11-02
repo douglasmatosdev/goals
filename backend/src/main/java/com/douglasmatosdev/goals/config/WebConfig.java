@@ -1,4 +1,4 @@
-package com.douglasmatosdev.config;
+package com.douglasmatosdev.goals.config;
 
 
 import java.util.List;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.ContentNegotiationConfi
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.douglasmatosdev.serialization.converter.YamlJackson2HttpMesageConverter;
+import com.douglasmatosdev.goals.serialization.converter.YamlJackson2HttpMesageConverter;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer{

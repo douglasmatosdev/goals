@@ -1,4 +1,4 @@
-package com.douglasmatosdev.security.jwt;
+package com.douglasmatosdev.goals.security.jwt;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;

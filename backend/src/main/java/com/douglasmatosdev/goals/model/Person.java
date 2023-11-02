@@ -1,4 +1,4 @@
-package com.douglasmatosdev.model;
+package com.douglasmatosdev.goals.model;
 
 import jakarta.persistence.*;
 

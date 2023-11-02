@@ -1,4 +1,4 @@
-package com.douglasmatosdev.exceptions;
+package com.douglasmatosdev.goals.exceptions;
 
 import java.io.Serializable;
 import java.util.Date;

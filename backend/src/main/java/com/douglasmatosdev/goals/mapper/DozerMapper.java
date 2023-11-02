@@ -1,4 +1,4 @@
-package com.douglasmatosdev.mapper;
+package com.douglasmatosdev.goals.mapper;
 
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;

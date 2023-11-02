@@ -1,4 +1,4 @@
-package com.douglasmatosdev.data.vo.v1;
+package com.douglasmatosdev.goals.data.vo.v1;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

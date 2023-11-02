@@ -1,4 +1,4 @@
-package com.douglasmatosdev.controllers;
+package com.douglasmatosdev.goals.controllers;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.douglasmatosdev.data.vo.v1.PersonVO;
-import com.douglasmatosdev.services.PersonServices;
-import com.douglasmatosdev.util.MediaType;
+import com.douglasmatosdev.goals.data.vo.v1.PersonVO;
+import com.douglasmatosdev.goals.services.PersonServices;
+import com.douglasmatosdev.goals.util.MediaType;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;

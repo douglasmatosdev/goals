@@ -1,4 +1,4 @@
-package com.douglasmatosdev.data.vo.v1.security;
+package com.douglasmatosdev.goals.data.vo.v1.security;
 
 import java.io.Serializable;
 import java.util.Date;

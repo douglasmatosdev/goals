@@ -1,4 +1,4 @@
-package com.douglasmatosdev.config;
+package com.douglasmatosdev.goals.config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,8 +18,8 @@ import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm;
 import org.springframework.security.web.SecurityFilterChain;
 
-import com.douglasmatosdev.security.jwt.JwtConfigurer;
-import com.douglasmatosdev.security.jwt.JwtTokenProvider;
+import com.douglasmatosdev.goals.security.jwt.JwtConfigurer;
+import com.douglasmatosdev.goals.security.jwt.JwtTokenProvider;
 
 @EnableWebSecurity
 @Configuration
@@ -48,8 +48,9 @@ public class SecurityConfig {
 
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		return http
-				.httpBasic().disable()
+		http
+//				.httpBasic().disable()
+				.csrf(AbstractHttpConfigurer::disable)
 				.csrf(AbstractHttpConfigurer::disable)
 				.sessionManagement(
 						session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -64,11 +65,11 @@ public class SecurityConfig {
 								.requestMatchers("/api/**").authenticated()
 								.requestMatchers("/users").denyAll()
 				)
-				.cors()
-				.and()
-				.apply(new JwtConfigurer(tokenProvider))
-				.and()
-				.build();
-
+				.cors(cors -> {})
+//				.and()
+				.apply(new JwtConfigurer(tokenProvider));
+//				.and()
+//				.build();
+return http.build();
 	}
 }

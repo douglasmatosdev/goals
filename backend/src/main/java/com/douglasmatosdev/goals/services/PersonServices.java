@@ -1,4 +1,4 @@
-package com.douglasmatosdev.services;
+package com.douglasmatosdev.goals.services;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -8,13 +8,13 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import org.springframework.stereotype.Service;
 
-import com.douglasmatosdev.controllers.PersonController;
-import com.douglasmatosdev.data.vo.v1.PersonVO;
-import com.douglasmatosdev.exceptions.RequiredObjectIsNullException;
-import com.douglasmatosdev.exceptions.ResourceNotFoundException;
-import com.douglasmatosdev.mapper.DozerMapper;
-import com.douglasmatosdev.model.Person;
-import com.douglasmatosdev.repositories.PersonRepository;
+import com.douglasmatosdev.goals.controllers.PersonController;
+import com.douglasmatosdev.goals.data.vo.v1.PersonVO;
+import com.douglasmatosdev.goals.exceptions.RequiredObjectIsNullException;
+import com.douglasmatosdev.goals.exceptions.ResourceNotFoundException;
+import com.douglasmatosdev.goals.mapper.DozerMapper;
+import com.douglasmatosdev.goals.model.Person;
+import com.douglasmatosdev.goals.repositories.PersonRepository;
 
 @Service
 public class PersonServices {

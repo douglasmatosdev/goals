@@ -1,4 +1,4 @@
-package com.douglasmatosdev.security.jwt;
+package com.douglasmatosdev.goals.security.jwt;
 
 import java.io.IOException;
 

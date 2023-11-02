@@ -1,4 +1,4 @@
-package com.douglasmatosdev.security.jwt;
+package com.douglasmatosdev.goals.security.jwt;
 
 import java.util.Base64;
 import java.util.Date;
@@ -18,8 +18,8 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
-import com.douglasmatosdev.data.vo.v1.security.TokenVO;
-import com.douglasmatosdev.exceptions.InvalidJwtAuthenticationException;
+import com.douglasmatosdev.goals.data.vo.v1.security.TokenVO;
+import com.douglasmatosdev.goals.exceptions.InvalidJwtAuthenticationException;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
 

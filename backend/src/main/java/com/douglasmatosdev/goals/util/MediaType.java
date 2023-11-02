@@ -1,4 +1,4 @@
-package com.douglasmatosdev.util;
+package com.douglasmatosdev.goals.util;
 
 public class MediaType {
     public static final String APPLICATION_YAML = "application/x-yaml";

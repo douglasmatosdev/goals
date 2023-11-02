@@ -1,4 +1,4 @@
-package com.douglasmatosdev.services;
+package com.douglasmatosdev.goals.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,10 +8,10 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.douglasmatosdev.data.vo.v1.security.AccountCredentialsVO;
-import com.douglasmatosdev.data.vo.v1.security.TokenVO;
-import com.douglasmatosdev.repositories.UserRepository;
-import com.douglasmatosdev.security.jwt.JwtTokenProvider;
+import com.douglasmatosdev.goals.data.vo.v1.security.AccountCredentialsVO;
+import com.douglasmatosdev.goals.data.vo.v1.security.TokenVO;
+import com.douglasmatosdev.goals.repositories.UserRepository;
+import com.douglasmatosdev.goals.security.jwt.JwtTokenProvider;
 
 @Service
 public class AuthServices {
