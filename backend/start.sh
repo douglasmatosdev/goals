@@ -6,6 +6,6 @@ export DATABASE_HOST=localhost
 export DATABASE_PORT=3306
 export DATABASE_USERNAME=root
 export DATABASE_PASSWORD=admin123
-# douglas
+
 ./mvnw package -Dmaven.test.skip
 java -jar target/*.jar
