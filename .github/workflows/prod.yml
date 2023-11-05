@@ -1,6 +1,7 @@
 name: Deploy Java application
 
 on: 
+  workflow_dispatch:
   push:
       branches: [main]
       paths: 
