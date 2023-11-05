@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE } from "@/utils/constants"
+import { LOCAL_STORAGE } from '@/utils/constants'
 
 const accountNonExpired = true
 const accountNonLocked = true
