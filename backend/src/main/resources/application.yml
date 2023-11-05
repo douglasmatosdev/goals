@@ -1,14 +1,16 @@
 cors:
-  originPatterns: ${ORIGIN_PATTERNS}
+  originPatterns: ${GOALS_ORIGIN_PATTERNS}
 security:
   jwt:
     token:
-      secret-key: ${JWT_TOKEN_SECRET_KEY}
-      expire-length: ${JWT_TOKEN_SECRET_EXPIRE_LENGTH}
+      secret-key: ${GOALS_JWT_TOKEN_SECRET_KEY}
+      expire-length: ${GOALS_JWT_TOKEN_SECRET_EXPIRE_LENGTH}
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${DATABASE_URL}
+    url: jdbc:mysql://${GOALS_DATABASE_HOST}:${GOALS_DATABASE_PORT}/${GOALS_DATABASE_NAME}?useTimezone=true&serverTimezone=UTC
+    username: ${GOALS_DATABASE_USERNAME}
+    password: ${GOALS_DATABASE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: none

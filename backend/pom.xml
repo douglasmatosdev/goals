@@ -128,13 +128,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin><plugin>
+				<version>3.1.5</version>
+			</plugin>
+			<plugin>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-maven-plugin</artifactId>
 			<configuration>
-				<url>jdbc:mysql://localhost:3306/goals_db?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
-				<user>root</user>
-				<password>admin123</password>
+				<url>jdbc:mysql://${env.GOALS_DATABASE_HOST}:${env.GOALS_DATABASE_PORT}/${env.GOALS_DATABASE_NAME}?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
+				<user>${env.GOALS_DATABASE_USERNAME}</user>
+				<password>${env.GOALS_DATABASE_PASSWORD}</password>
 			</configuration>
 			<dependencies>
 				<dependency>
