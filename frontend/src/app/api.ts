@@ -64,7 +64,7 @@ export const RoutesApp = {
 }
 
 const urls = {
-    base: 'http://localhost:8080',
+    base: 'http://ec2-18-117-105-40.us-east-2.compute.amazonaws.com:8080',
     login: '/auth/signin',
     register: '/auth/register',
     delete: '/auth/delete'
