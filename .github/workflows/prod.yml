@@ -1,10 +1,10 @@
 name: Deploy Java application
 
 on: 
-    push:
-        branches: [main]
-        paths-ignore: "frontend/**"
-        paths: "backend/**"
+  push:
+      branches: [main]
+      paths-ignore: "frontend/**"
+      paths: "backend/**"
 
 jobs:
     build:
@@ -12,13 +12,13 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
-
+            
             - name: Setup Java
               uses: actions/setup-java@v3
               with:
-                distribution: 'temurin'
-                java-version: '17'
-            
+                  distribution: 'temurin'
+                  java-version: '17'
+                
             - name: Build project
               run: mvn clean install -DskipTests
             
@@ -27,6 +27,6 @@ jobs:
             
             - name: Build Docker image
               run: docker build -t douglasmatosdev/goals .
-
+            
             - name: Push image docker hub
               run: docker push douglasmatosdev/goals
