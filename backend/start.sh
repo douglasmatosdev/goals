@@ -7,8 +7,5 @@ export DATABASE_PORT=3306
 export DATABASE_USERNAME=root
 export DATABASE_PASSWORD=admin123
 
-
-
-
 ./mvnw package -Dmaven.test.skip
 java -jar target/*.jar
