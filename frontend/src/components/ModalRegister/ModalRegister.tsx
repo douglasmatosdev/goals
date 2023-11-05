@@ -55,7 +55,7 @@ export const ModalRegister = (props: ModalRegisterProps): JSX.Element => {
                 router.push(RoutesApp.login)
             })
             .catch((err: Error) => {
-                setSessionStorageItem(SESSION_STORAGE.TOAST, err.message)
+                setSessionStorageItem(SESSION_STORAGE.TOAST, `error:${err.message}`)
                 router.push('/')
             })
     }

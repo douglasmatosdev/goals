@@ -56,7 +56,7 @@ export const ModalLogin = (): JSX.Element => {
                 })
             })
             .catch((err: Error) => {
-                setSessionStorageItem(SESSION_STORAGE.TOAST, err.message)
+                setSessionStorageItem(SESSION_STORAGE.TOAST, `error:${err.message}`)
                 router.push('/')
             })
     }
