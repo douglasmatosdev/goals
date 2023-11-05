@@ -8,7 +8,7 @@ security:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${GOALS_DATABASE_HOST}:${GOALS_DATABASE_PORT}/${GOALS_DATABASE_NAME}?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://${GOALS_DATABASE_HOST}:${GOALS_DATABASE_PORT}/${GOALS_DATABASE_NAME}?enabledTLSProtocols=TLSv1.2
     username: ${GOALS_DATABASE_USERNAME}
     password: ${GOALS_DATABASE_PASSWORD}
   jpa:
