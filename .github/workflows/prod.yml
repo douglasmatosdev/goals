@@ -40,6 +40,9 @@ jobs:
       needs: build
       runs-on: self-hosted
       steps:
+        - name: Create network
+          run: docker network create goals-network
+
         - name: Pull mysql image
           run: docker pull mysql/mysql-server:8.0.32
 
@@ -47,7 +50,7 @@ jobs:
           run: docker rm -f mysql_container
         
         - name: Run docker mysql_container
-          run: docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD='${{secrets.GOALS_DATABASE_PASSWORD}}' --name mysql_container mysql/mysql-server:8.0.32
+          run: docker run -d -p 3306:3306 --network goals-network -e MYSQL_ROOT_PASSWORD='${{secrets.GOALS_DATABASE_PASSWORD}}' --name mysql_container mysql/mysql-server:8.0.32
 
         - name: Pull goals image from Docker hub
           run: docker pull douglasmatosdev/goals:latest
@@ -56,4 +59,4 @@ jobs:
           run: docker rm -f goals_container
         
         - name: Run docker goals_container
-          run: docker run -d -p 8080:8080 -e GOALS_ORIGIN_PATTERNS=${{secrets.GOALS_ORIGIN_PATTERNS}} -e GOALS_JWT_TOKEN_SECRET_KEY=${{secrets.GOALS_JWT_TOKEN_SECRET_KEY}} -e GOALS_JWT_TOKEN_SECRET_EXPIRE_LENGTH=${{secrets.GOALS_JWT_TOKEN_SECRET_EXPIRE_LENGTH}} -e GOALS_DATABASE_NAME=${{secrets.GOALS_DATABASE_NAME}} -e GOALS_DATABASE_HOST=${{secrets.GOALS_DATABASE_HOST}} -e GOALS_DATABASE_PORT=${{secrets.GOALS_DATABASE_PORT}} -e GOALS_DATABASE_USERNAME=${{secrets.GOALS_DATABASE_USERNAME}} -e GOALS_DATABASE_PASSWORD='${{secrets.GOALS_DATABASE_PASSWORD}}' --name goals_container douglasmatosdev/goals
+          run: docker run -d -p 8080:8080 --network goals-network -e GOALS_ORIGIN_PATTERNS=${{secrets.GOALS_ORIGIN_PATTERNS}} -e GOALS_JWT_TOKEN_SECRET_KEY=${{secrets.GOALS_JWT_TOKEN_SECRET_KEY}} -e GOALS_JWT_TOKEN_SECRET_EXPIRE_LENGTH=${{secrets.GOALS_JWT_TOKEN_SECRET_EXPIRE_LENGTH}} -e GOALS_DATABASE_NAME=${{secrets.GOALS_DATABASE_NAME}} -e GOALS_DATABASE_HOST=${{secrets.GOALS_DATABASE_HOST}} -e GOALS_DATABASE_PORT=${{secrets.GOALS_DATABASE_PORT}} -e GOALS_DATABASE_USERNAME=${{secrets.GOALS_DATABASE_USERNAME}} -e GOALS_DATABASE_PASSWORD='${{secrets.GOALS_DATABASE_PASSWORD}}' --name goals_container douglasmatosdev/goals
