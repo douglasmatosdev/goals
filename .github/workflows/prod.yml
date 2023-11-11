@@ -41,7 +41,7 @@ jobs:
                 context: .
                 file: ./Dockerfile
                 push: true
-                tags: ${{ secrets.DOCKER_HUB_USERNAME }}/<goals>:latest
+                tags: ${{ secrets.DOCKER_HUB_USERNAME }}/goals:latest
             # - name: Build Docker image
             #   run: docker build -t douglasmatosdev/goals .
             
