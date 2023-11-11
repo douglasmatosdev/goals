@@ -39,7 +39,7 @@ jobs:
               uses: docker/build-push-action@v3
               with:
                 context: .
-                file: ./Dockerfile
+                # file: ./Dockerfile
                 push: true
                 tags: ${{ secrets.DOCKER_HUB_USERNAME }}/goals:latest
             # - name: Build Docker image
