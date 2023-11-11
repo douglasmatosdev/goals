@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Head from 'next/head'
 
 export const metadata: Metadata = {
     title: 'Goals',
@@ -7,8 +8,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
     return (
-        <html lang="en">
-            <body suppressHydrationWarning={true}>{children}</body>
-        </html>
+        <>
+            <Head>
+                <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+            </Head>
+            <html lang="en">
+                <body suppressHydrationWarning={true}>{children}</body>
+            </html>
+        </>
     )
 }
