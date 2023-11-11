@@ -32,21 +32,11 @@ jobs:
               with:
                 username: ${{ secrets.DOCKER_HUB_USERNAME }}
                 password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-            # - name: Login Docker Hub
-            #   run: docker login -u ${{secrets.DOCKER_HUB_USERNAME}} -p ${{secrets.DOCKER_HUB_ACCESS_TOKEN}}
-            
             - name: Build and push
               uses: docker/build-push-action@v3
               with:
-                context: ./backend
-                file: ./Dockerfile
                 push: true
                 tags: ${{ secrets.DOCKER_HUB_USERNAME }}/goals:latest
-            # - name: Build Docker image
-            #   run: docker build -t douglasmatosdev/goals .
-            
-            # - name: Push image docker hub
-            #   run: docker push douglasmatosdev/goals
     
     deploy:
       needs: build
