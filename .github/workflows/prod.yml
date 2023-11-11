@@ -44,8 +44,8 @@ jobs:
           run: docker login -u ${{secrets.DOCKER_HUB_USERNAME}} -p ${{secrets.DOCKER_HUB_PASSWORD}}
 
         - name: Delete network
-          run: docker network rm goals-network
           if: always()
+          run: docker network rm goals-network
 
         - name: Create network
           run: docker network create goals-network
