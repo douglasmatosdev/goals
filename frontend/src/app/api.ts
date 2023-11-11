@@ -64,7 +64,7 @@ export const RoutesApp = {
 }
 
 const urls = {
-    base: process.env.SERVER_URL,
+    base: process.env.NEXT_PUBLIC_SERVER_URL,
     login: '/auth/signin',
     register: '/auth/register',
     delete: '/auth/delete'
