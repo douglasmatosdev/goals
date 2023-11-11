@@ -1,16 +1,4 @@
-
-
-
-
-
-
-
-
-
-
 package com.douglasmatosdev.goals;
-
-
 
 import com.douglasmatosdev.goals.security.PasswordEnconder;
 import org.springframework.boot.SpringApplication;

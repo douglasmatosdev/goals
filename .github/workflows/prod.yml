@@ -40,9 +40,6 @@ jobs:
       needs: build
       runs-on: self-hosted
       steps:
-        - name: Create network
-          run: docker network create goals-network
-
         - name: Pull mysql image
           run: docker pull mysql/mysql-server:8.0.32
 
