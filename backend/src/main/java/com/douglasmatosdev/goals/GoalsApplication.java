@@ -10,6 +10,24 @@ public class GoalsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GoalsApplication.class, args);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		 String result1 = PasswordEnconder.encode("admin123");
 		 String result2 = PasswordEnconder.encode("admin234");
 		 System.out.println("My hash result1 " + result1);
