@@ -39,7 +39,7 @@ jobs:
               run: docker build -t douglasmatosdev/goals .
             
             - name: Push image docker hub
-              run: docker push douglasmatosdev/goals
+              run: docker push douglasmatosdev/goals:latest
     
     deploy:
       needs: build
