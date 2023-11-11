@@ -37,7 +37,7 @@ export const ModalLogin = (): JSX.Element => {
         await login(username, password)
             .then((e: ResponseLogin) => {
                 if (!e?.authenticated) {
-                    router.push('/')
+                    // router.push('/')
 
                     setSessionStorageItem(SESSION_STORAGE.TOAST, 'warning:Unregistered username or password')
 
@@ -57,7 +57,7 @@ export const ModalLogin = (): JSX.Element => {
             })
             .catch((err: Error) => {
                 setSessionStorageItem(SESSION_STORAGE.TOAST, `error:${err.message}`)
-                router.push('/')
+                // router.push('/')
             })
     }
 
